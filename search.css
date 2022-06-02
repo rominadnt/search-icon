@@ -1,0 +1,41 @@
+.search-icon {
+    width: 4rem;
+    height: 4rem;
+    background: rgb(131, 58, 180);
+    background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 237, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+}
+
+.search-icon::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 5px solid #333;
+}
+
+.search-icon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background-color: #333;
+    right: 0;
+    border-radius: 5px;
+}
+
+.search-icon .search-icon {
+    transform: scale(1);
+    transition: .3s;
+    background: transparent;
+}
+
+.search-icon:hover .search-icon {
+    transform: scale(.2);
+}
